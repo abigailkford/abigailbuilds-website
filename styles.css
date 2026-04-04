@@ -603,6 +603,7 @@ body {
 .final-cta {
     padding: var(--spacing-2xl) 0;
     text-align: center;
+    background-color: var(--color-background-alt);
 }
 
 .cta-headline {
