@@ -81,6 +81,20 @@ if (mobileMenuToggle) {
             spans[2].style.transform = 'none';
         }
     });
+    
+    // Close mobile menu when clicking a link
+    const navItems = document.querySelectorAll('.nav-links a');
+    navItems.forEach(item => {
+        item.addEventListener('click', () => {
+            navLinks.classList.remove('active');
+            mobileMenuToggle.classList.remove('active');
+            
+            const spans = mobileMenuToggle.querySelectorAll('span');
+            spans[0].style.transform = 'none';
+            spans[1].style.opacity = '1';
+            spans[2].style.transform = 'none';
+        });
+    });
 }
 
 // ========================================
@@ -157,14 +171,37 @@ window.addEventListener('scroll', () => {
 });
 
 // ========================================
-// FORM HANDLING (if you add a contact form later)
+// FORM HANDLING
 // ========================================
 const contactForm = document.querySelector('#contact-form');
 if (contactForm) {
     contactForm.addEventListener('submit', (e) => {
         e.preventDefault();
-        // Add your form submission logic here
-        console.log('Form submitted');
+        
+        const formData = new FormData(contactForm);
+        const name = formData.get('name');
+        const email = formData.get('email');
+        const project = formData.get('project');
+        
+        // Create mailto link with form data
+        const subject = encodeURIComponent(`Project Inquiry from ${name}`);
+        const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nProject Details:\n${project}`);
+        const mailtoLink = `mailto:hello@abigailbuilds.com?subject=${subject}&body=${body}`;
+        
+        // Open email client
+        window.location.href = mailtoLink;
+        
+        // Show confirmation message
+        const button = contactForm.querySelector('button[type="submit"]');
+        const originalText = button.textContent;
+        button.textContent = 'Opening your email client...';
+        button.disabled = true;
+        
+        setTimeout(() => {
+            button.textContent = originalText;
+            button.disabled = false;
+            contactForm.reset();
+        }, 3000);
     });
 }
 
@@ -214,32 +251,10 @@ function createParticles() {
 window.addEventListener('load', createParticles);
 
 // ========================================
-// TYPING ANIMATION FOR HERO
+// TYPING ANIMATION - REMOVED FOR ACCESSIBILITY
 // ========================================
-function typeWriter(element, text, speed = 50) {
-    let i = 0;
-    element.textContent = '';
-    
-    function type() {
-        if (i < text.length) {
-            element.textContent += text.charAt(i);
-            i++;
-            setTimeout(type, speed);
-        }
-    }
-    type();
-}
-
-// Apply typing effect to hero headline on page load
-window.addEventListener('load', () => {
-    const headline = document.querySelector('.hero-headline');
-    if (headline) {
-        const originalText = headline.textContent;
-        setTimeout(() => {
-            typeWriter(headline, originalText, 40);
-        }, 300);
-    }
-});
+// Typing animation removed - it interferes with screen readers
+// and adds unnecessary complexity
 
 // ========================================
 // PARALLAX EFFECT FOR HERO ICON
