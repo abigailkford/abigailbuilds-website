@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Abigail Builds - Brand Colors</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+            background: #FAF9F6;
+            color: #1f2937;
+            padding: 2rem;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 2px solid #D9F3EE;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #0F5F5C;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            color: #6b7280;
+            font-size: 1.125rem;
+        }
+
+        .color-section {
+            margin-bottom: 3rem;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            color: #0F5F5C;
+        }
+
+        .color-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .color-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .color-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .color-swatch {
+            height: 120px;
+            position: relative;
+        }
+
+        .color-info {
+            padding: 1rem;
+        }
+
+        .color-name {
+            font-weight: 600;
+            font-size: 0.875rem;
+            margin-bottom: 0.5rem;
+            color: #1f2937;
+        }
+
+        .color-code {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #f9fafb;
+            padding: 0.5rem 0.75rem;
+            border-radius: 6px;
+            margin-bottom: 0.5rem;
+        }
+
+        .code-text {
+            font-family: 'Monaco', 'Courier New', monospace;
+            font-size: 0.875rem;
+            font-weight: 500;
+            color: #374151;
+        }
+
+        .copy-btn {
+            background: #0F5F5C;
+            color: white;
+            border: none;
+            padding: 0.375rem 0.75rem;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .copy-btn:hover {
+            background: #0a4441;
+        }
+
+        .copy-btn:active {
+            transform: scale(0.95);
+        }
+
+        .copy-btn.copied {
+            background: #F4A259;
+        }
+
+        .usage-note {
+            background: #D9F3EE;
+            padding: 1rem;
+            border-radius: 8px;
+            margin-top: 3rem;
+            border-left: 4px solid #0F5F5C;
+        }
+
+        .usage-note h3 {
+            color: #0F5F5C;
+            margin-bottom: 0.5rem;
+            font-size: 1rem;
+        }
+
+        .usage-note p {
+            color: #374151;
+            font-size: 0.875rem;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 1rem;
+            }
+
+            h1 {
+                font-size: 1.75rem;
+            }
+
+            .color-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Abigail Builds</h1>
+            <p class="subtitle">Brand Color Palette</p>
+        </header>
+
+        <!-- Primary Colors -->
+        <section class="color-section">
+            <h2 class="section-title">Primary Colors</h2>
+            <div class="color-grid">
+                <!-- Deep Teal -->
+                <div class="color-card">
+                    <div class="color-swatch" style="background: #0F5F5C;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Deep Teal</div>
+                        <div class="color-code">
+                            <span class="code-text">#0F5F5C</span>
+                            <button class="copy-btn" onclick="copyColor('#0F5F5C', this)">Copy</button>
+                        </div>
+                        <div class="color-code">
+                            <span class="code-text">rgb(15, 95, 92)</span>
+                            <button class="copy-btn" onclick="copyColor('rgb(15, 95, 92)', this)">Copy</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Soft Mint -->
+                <div class="color-card">
+                    <div class="color-swatch" style="background: #D9F3EE;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Soft Mint</div>
+                        <div class="color-code">
+                            <span class="code-text">#D9F3EE</span>
+                            <button class="copy-btn" onclick="copyColor('#D9F3EE', this)">Copy</button>
+                        </div>
+                        <div class="color-code">
+                            <span class="code-text">rgb(217, 243, 238)</span>
+                            <button class="copy-btn" onclick="copyColor('rgb(217, 243, 238)', this)">Copy</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Golden Apricot -->
+                <div class="color-card">
+                    <div class="color-swatch" style="background: #F4A259;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Golden Apricot</div>
+                        <div class="color-code">
+                            <span class="code-text">#F4A259</span>
+                            <button class="copy-btn" onclick="copyColor('#F4A259', this)">Copy</button>
+                        </div>
+                        <div class="color-code">
+                            <span class="code-text">rgb(244, 162, 89)</span>
+                            <button class="copy-btn" onclick="copyColor('rgb(244, 162, 89)', this)">Copy</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Off-White -->
+                <div class="color-card">
+                    <div class="color-swatch" style="background: #FAF9F6; border: 1px solid #e5e7eb;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Off-White</div>
+                        <div class="color-code">
+                            <span class="code-text">#FAF9F6</span>
+                            <button class="copy-btn" onclick="copyColor('#FAF9F6', this)">Copy</button>
+                        </div>
+                        <div class="color-code">
+                            <span class="code-text">rgb(250, 249, 246)</span>
+                            <button class="copy-btn" onclick="copyColor('rgb(250, 249, 246)', this)">Copy</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Deep Teal Variations -->
+        <section class="color-section">
+            <h2 class="section-title">Deep Teal Variations</h2>
+            <div class="color-grid">
+                <div class="color-card">
+                    <div class="color-swatch" style="background: #1A8A84;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Teal Lighter +40%</div>
+                        <div class="color-code">
+                            <span class="code-text">#1A8A84</span>
+                            <button class="copy-btn" onclick="copyColor('#1A8A84', this)">Copy</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="color-card">
+                    <div class="color-swatch" style="background: #137470;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Teal Lighter +20%</div>
+                        <div class="color-code">
+                            <span class="code-text">#137470</span>
+                            <button class="copy-btn" onclick="copyColor('#137470', this)">Copy</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="color-card">
+                    <div class="color-swatch" style="background: #0F5F5C;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Deep Teal (Base)</div>
+                        <div class="color-code">
+                            <span class="code-text">#0F5F5C</span>
+                            <button class="copy-btn" onclick="copyColor('#0F5F5C', this)">Copy</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="color-card">
+                    <div class="color-swatch" style="background: #0a4441;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Teal Darker -20%</div>
+                        <div class="color-code">
+                            <span class="code-text">#0a4441</span>
+                            <button class="copy-btn" onclick="copyColor('#0a4441', this)">Copy</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="color-card">
+                    <div class="color-swatch" style="background: #072f2d;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Teal Darker -40%</div>
+                        <div class="color-code">
+                            <span class="code-text">#072f2d</span>
+                            <button class="copy-btn" onclick="copyColor('#072f2d', this)">Copy</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Soft Mint Variations -->
+        <section class="color-section">
+            <h2 class="section-title">Soft Mint Variations</h2>
+            <div class="color-grid">
+                <div class="color-card">
+                    <div class="color-swatch" style="background: #FFFFFF; border: 1px solid #e5e7eb;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Mint Lighter +40%</div>
+                        <div class="color-code">
+                            <span class="code-text">#FFFFFF</span>
+                            <button class="copy-btn" onclick="copyColor('#FFFFFF', this)">Copy</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="color-card">
+                    <div class="color-swatch" style="background: #EFF9F7; border: 1px solid #e5e7eb;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Mint Lighter +20%</div>
+                        <div class="color-code">
+                            <span class="code-text">#EFF9F7</span>
+                            <button class="copy-btn" onclick="copyColor('#EFF9F7', this)">Copy</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="color-card">
+                    <div class="color-swatch" style="background: #D9F3EE;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Soft Mint (Base)</div>
+                        <div class="color-code">
+                            <span class="code-text">#D9F3EE</span>
+                            <button class="copy-btn" onclick="copyColor('#D9F3EE', this)">Copy</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="color-card">
+                    <div class="color-swatch" style="background: #B3E5DB;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Mint Darker -20%</div>
+                        <div class="color-code">
+                            <span class="code-text">#B3E5DB</span>
+                            <button class="copy-btn" onclick="copyColor('#B3E5DB', this)">Copy</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="color-card">
+                    <div class="color-swatch" style="background: #8DD7C8;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Mint Darker -40%</div>
+                        <div class="color-code">
+                            <span class="code-text">#8DD7C8</span>
+                            <button class="copy-btn" onclick="copyColor('#8DD7C8', this)">Copy</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Golden Apricot Variations -->
+        <section class="color-section">
+            <h2 class="section-title">Golden Apricot Variations</h2>
+            <div class="color-grid">
+                <div class="color-card">
+                    <div class="color-swatch" style="background: #FDD4A8;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Apricot Lighter +40%</div>
+                        <div class="color-code">
+                            <span class="code-text">#FDD4A8</span>
+                            <button class="copy-btn" onclick="copyColor('#FDD4A8', this)">Copy</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="color-card">
+                    <div class="color-swatch" style="background: #F9BB81;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Apricot Lighter +20%</div>
+                        <div class="color-code">
+                            <span class="code-text">#F9BB81</span>
+                            <button class="copy-btn" onclick="copyColor('#F9BB81', this)">Copy</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="color-card">
+                    <div class="color-swatch" style="background: #F4A259;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Golden Apricot (Base)</div>
+                        <div class="color-code">
+                            <span class="code-text">#F4A259</span>
+                            <button class="copy-btn" onclick="copyColor('#F4A259', this)">Copy</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="color-card">
+                    <div class="color-swatch" style="background: #E18937;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Apricot Darker -20%</div>
+                        <div class="color-code">
+                            <span class="code-text">#E18937</span>
+                            <button class="copy-btn" onclick="copyColor('#E18937', this)">Copy</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="color-card">
+                    <div class="color-swatch" style="background: #CE7020;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Apricot Darker -40%</div>
+                        <div class="color-code">
+                            <span class="code-text">#CE7020</span>
+                            <button class="copy-btn" onclick="copyColor('#CE7020', this)">Copy</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Off-White Variations -->
+        <section class="color-section">
+            <h2 class="section-title">Off-White / Neutral Variations</h2>
+            <div class="color-grid">
+                <div class="color-card">
+                    <div class="color-swatch" style="background: #FFFFFF; border: 1px solid #e5e7eb;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Pure White</div>
+                        <div class="color-code">
+                            <span class="code-text">#FFFFFF</span>
+                            <button class="copy-btn" onclick="copyColor('#FFFFFF', this)">Copy</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="color-card">
+                    <div class="color-swatch" style="background: #FAF9F6; border: 1px solid #e5e7eb;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Off-White (Base)</div>
+                        <div class="color-code">
+                            <span class="code-text">#FAF9F6</span>
+                            <button class="copy-btn" onclick="copyColor('#FAF9F6', this)">Copy</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="color-card">
+                    <div class="color-swatch" style="background: #F0EFE9; border: 1px solid #e5e7eb;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Light Beige</div>
+                        <div class="color-code">
+                            <span class="code-text">#F0EFE9</span>
+                            <button class="copy-btn" onclick="copyColor('#F0EFE9', this)">Copy</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="color-card">
+                    <div class="color-swatch" style="background: #E5E4DC;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Warm Gray</div>
+                        <div class="color-code">
+                            <span class="code-text">#E5E4DC</span>
+                            <button class="copy-btn" onclick="copyColor('#E5E4DC', this)">Copy</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="color-card">
+                    <div class="color-swatch" style="background: #D1D0C5;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Medium Beige</div>
+                        <div class="color-code">
+                            <span class="code-text">#D1D0C5</span>
+                            <button class="copy-btn" onclick="copyColor('#D1D0C5', this)">Copy</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Usage Notes -->
+        <div class="usage-note">
+            <h3>Usage Guidelines</h3>
+            <p><strong>Deep Teal (#0F5F5C):</strong> Primary brand color for headers, buttons, CTAs, and key navigation elements.</p>
+            <p><strong>Soft Mint (#D9F3EE):</strong> Backgrounds, subtle accents, and section dividers. Creates breathing room.</p>
+            <p><strong>Golden Apricot (#F4A259):</strong> Accent color for highlights, hover states, important labels, and visual interest.</p>
+            <p><strong>Off-White (#FAF9F6):</strong> Main backgrounds and light surfaces. More elegant than pure white.</p>
+        </div>
+    </div>
+
+    <script>
+        function copyColor(color, button) {
+            navigator.clipboard.writeText(color).then(() => {
+                const originalText = button.textContent;
+                button.textContent = 'Copied!';
+                button.classList.add('copied');
+                
+                setTimeout(() => {
+                    button.textContent = originalText;
+                    button.classList.remove('copied');
+                }, 1500);
+            }).catch(err => {
+                console.error('Failed to copy:', err);
+            });
+        }
+    </script>
+</body>
+</html>
