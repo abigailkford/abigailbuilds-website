@@ -68,8 +68,8 @@ Edit the CSS variables in `styles.css`:
 :root {
     --color-primary: #0F5F5C;        /* Deep Teal */
     --color-primary-dark: #0a4441;   /* Darker Teal for hovers */
-    --color-secondary: #D9F3EE;      /* Soft Mint */
-    --color-accent: #F4A259;         /* Golden Apricot */
+    --color-secondary: #b3e2da;      /* Tech Mint */
+    --color-accent: #d97c32;         /* Apricot Pro */
     --color-background: #FAF9F6;     /* Off-White */
 }
 ```

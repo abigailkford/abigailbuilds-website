@@ -13,8 +13,8 @@ This is a professional portfolio website with a modern, minimal design.
 
 ## Color Scheme
 - Primary: Deep Teal — #0F5F5C
-- Secondary: Soft Mint — #D9F3EE
-- Accent: Golden Apricot — #F4A259
+- Secondary: Tech Mint — #b3e2da
+- Accent: Apricot Pro — #d97c32
 - Highlight: Off-White — #FAF9F6
 - Professional and trustworthy palette
 - High contrast for readability
